@@ -1,7 +1,7 @@
 <div class="container">
   <select (change)="onSelectUser($event.target)">
     <option value="">-- Select user --</option>
-    @for ((user of users$ | async); track user.id) {
+    @for (user of users$ | async; track user.id) {
     <option [value]="user.id">{{ user.name }}</option>
     }
   </select>

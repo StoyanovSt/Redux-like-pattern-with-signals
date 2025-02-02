@@ -1,12 +1,14 @@
 import { inject, Injectable } from '@angular/core';
 
-import { delay, map, Observable, of, tap } from 'rxjs';
 import { User } from '../models/user.interface';
-import { LoaderService } from './loader.service';
+import { LoaderService } from '../services/loader.service';
+
+import { delay, Observable, of, tap } from 'rxjs';
 
 @Injectable()
 export class UsersService {
-  loadingService = inject(LoaderService);
+  loaderService = inject(LoaderService);
+
   getUsers(): Observable<User[]> {
     return of<User[]>([
       { id: 1, name: 'Stiliyan' },
@@ -17,9 +19,9 @@ export class UsersService {
       { id: 6, name: 'Petar' },
       { id: 7, name: 'Nikolay' },
     ]).pipe(
-      tap(() => this.loadingService.showLoader()),
+      tap(() => this.loaderService.showLoader()),
       delay(2000),
-      tap(() => this.loadingService.hideLoader())
+      tap(() => this.loaderService.hideLoader())
     );
   }
 }

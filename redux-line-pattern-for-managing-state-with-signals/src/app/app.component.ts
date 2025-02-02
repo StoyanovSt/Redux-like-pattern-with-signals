@@ -13,5 +13,5 @@ import { LoaderComponent } from './ui/loader/loader.component';
 })
 export class AppComponent {
   title = 'redux-line-pattern-for-managing-state-with-signals';
-  loadingService = inject(LoaderService)
+  loaderService = inject(LoaderService)
 }

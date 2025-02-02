@@ -5,18 +5,16 @@
   align-items: center;
   justify-content: center;
   background-color: #e5e0e087;
-  position: relative;
-  z-index: 9999;
 
   .loader {
     width: 80px;
     height: 80px;
-    border-top: 6px solid rgb(87, 103, 226);
+    border-top: 6px solid rgba(4, 0, 0, 0.354);
     border-radius: 50%;
-    animation: rotateAnimation 750ms infinite linear;
+    animation: spin 750ms infinite linear;
   }
 
-  @keyframes rotateAnimation {
+  @keyframes spin {
     0% {
       transform: rotate(0deg);
     }
