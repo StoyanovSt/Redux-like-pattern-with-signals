@@ -5,4 +5,7 @@
     <option [value]="user.id">{{ user.name }}</option>
     }
   </select>
+  @if(isLoading()) {
+  <div>Loading user todos...</div>
+  }
 </div>
