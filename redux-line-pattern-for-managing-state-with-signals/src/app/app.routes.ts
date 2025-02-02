@@ -3,8 +3,7 @@ import { TodosComponent } from './todos/todos.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'todos',
     component: TodosComponent,
-    pathMatch: 'full',
   },
 ];
